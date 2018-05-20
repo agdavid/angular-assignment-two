@@ -8,9 +8,15 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Angular Assignment Two';
   userName = '';
+  userNamePresent = false;
+
+  onInputChange(event: Event) {
+    this.userNamePresent = true;
+  }
 
   onClearUserName() {
     this.userName = '';
+    this.userNamePresent = false;
   }
-  
+
 }

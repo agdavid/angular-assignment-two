@@ -7,9 +7,11 @@
 </div>
 <input
   type="text"
-  [(ngModel)]="userName">
+  [(ngModel)]="userName"
+  (input)="onInputChange($event)">
 <p>The username is: {{ userName || 'BLANK' }}</p>
 
 <button
   (click)="onClearUserName()"
+  [disabled]="!userNamePresent"
 >Clear Username</button>
